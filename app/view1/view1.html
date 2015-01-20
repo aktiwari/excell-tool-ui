@@ -1,0 +1,16 @@
+<p>This is the master price sheet</p>
+<form name="myForm">
+
+        Profile Picture: <input type="file" ng-file-select="" ng-model="picFile" name="file" accept="image/*" ng-file-change="generateThumb(picFile[0], $files)" required="">
+        <i ng-show="myForm.file.$error.required">*required</i>
+        <br>
+
+        <button ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">Submit</button>
+        <img ng-show="picFile[0].dataUrl != null" ng-src="{{picFile[0].dataUrl}}" class="thumb">
+		<span class="progress" ng-show="picFile[0].progress >= 0">
+			<div style="width:{{picFile[0].progress}}%" ng-bind="picFile[0].progress + '%'" class="ng-binding"></div>
+		</span>
+        <span ng-show="picFile[0].result">Upload Successful</span>
+
+    <br>
+</form>
