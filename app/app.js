@@ -1,12 +1,17 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+/**
+ * Main module.
+ */
+angular.module('excelApp', ['ngResource', 'ngRoute', 'mainNavList']).config(
+    function ($routeProvider) {
+        $routeProvider.when('/', {
+            templateUrl: 'uploads/upload-file.html',
+            controller: 'UploadFileCtrl'
+        }).when('/view-files', {
+            templateUrl: 'view-files/view-files.html',
+            controller: 'ViewFilesCtrl'
+        }).otherwise({
+            redirectTo: '/'
+        });
+    });
