@@ -6,10 +6,9 @@
 
 
 // Define our main app
-var app = angular.module('excelApp', [
-'lr.upload'
-]);
+var app = angular.module('excelApp');
 
+var host = "http://localhost:3000";
 app.controller('UploadFileCtrl', ['$q', '$scope', '$routeParams', '$location', '$http',
     function ($q, $scope, $routeParams, $location, $http) {
         // App variable to show the uploaded response
@@ -17,7 +16,7 @@ app.controller('UploadFileCtrl', ['$q', '$scope', '$routeParams', '$location', '
         // Get initial uploads and populate list
         $http({
             method: 'get',
-            url: '/uploads?' + new Date().getTime(),
+            url: host + '/uploads?' + new Date().getTime(),
             cache: false
         }).then(function (response) {
             $scope.uploads = response.data;

@@ -21,46 +21,47 @@
 </head>
 
 <body>
-    <div class="container">
-        <h3 class="text-muted">Devine Solitairs Excel tool</h3>
-        <div class="header" ng-app="mainNavList">
-            <ul class="nav nav-pills" ng-controller="mainNavCtrl">
-                <li ng-class="navClass('upload-file')"><a href="#">Upload File</a>
-                </li>
-                <li ng-class="navClass('view-files')"><a href="#/view-files">View Files</a>
-                </li>
 
-            </ul>
-        </div>
+    <h3 class="text-muted">Devine Solitairs Excel tool</h3>
+    <div class="header" ng-app="mainNavList">
+        <ul class="nav nav-pills" ng-controller="mainNavCtrl">
+            <li ng-class="navClass('upload-file')"><a href="#">Upload File</a>
+            </li>
+            <li ng-class="navClass('view-files')"><a href="#/view-files">View Files</a>
+            </li>
 
-        <div ng-view=""></div>
+        </ul>
     </div>
+
+    <div ng-view=""></div>
+
 
     <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-     <!-- Jquery -->
+    <!-- Jquery -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    
+
     <!-- AngularJS Modules -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    
+
     <script src='bower_components/angular-upload/angular-upload.min.js'></script>
 
     <!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
-    
+
     <!-- Bootstrap -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
-   
+
     <!-- Application level dependencies-->
     <script src="app.js"></script>
     <script src="main-nav-list.js"></script>
     <script src="uploads/upload-file.js"></script>
     <script src="view-files/view-files.js"></script>
+    <script src="login/login.controller.js"></script>
 
 
 

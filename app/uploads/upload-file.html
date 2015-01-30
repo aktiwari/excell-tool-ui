@@ -17,7 +17,7 @@
             <label for="accept-mimetypes">Allowed mimetypes. example "image/jpeg,application/pdf" the accept attribute on upload-button also allows for a javascript array of mimetypes</label>
             <input id="accept-mimetypes" class="form-control" type="text" ng-model="acceptTypes" />
         </div>
-        <upload-button class="btn btn-primary btn-upload" url="/upload" param="file" accept="acceptTypes" multiple="allowMultiple" force-iframe-upload="forceIframeUpload" data="uploadData" on-upload="onUpload(files)" on-success="onGlobalSuccess(response)" on-error="onError(response)" on-complete="onComplete(response)">Fileupload</div>
+        <upload-button class="btn btn-primary btn-upload" url="http://localhost:3000/upload" param="file" accept="acceptTypes" multiple="allowMultiple" force-iframe-upload="forceIframeUpload" data="uploadData" on-upload="onUpload(files)" on-success="onGlobalSuccess(response)" on-error="onError(response)" on-complete="onComplete(response)">Fileupload</div>
     </upload-button>
 </div>
 <h4 class="m-lg">Uploaded files</h4>
